@@ -161,3 +161,51 @@ const val4 = firstElement(["vinay","kumar","gupta"])
 val4.toUpperCase()
 console.log("🚀 ~ val4:", val4)
 
+
+interface Users {
+  name  : string;
+  age : number;
+  email : string;
+  fullName : string;
+  otp : number
+}
+
+type Users1 = {
+  name  : string;
+  age : number;
+  email : string;
+  fullName : string;
+  otp : number
+}
+
+// function sumOfAge (user1 : Users , user2 : Users) {
+//       return user1.age + user2.age;
+// }
+
+// const res = sumOfAge({name : "Vinay", age : 24}, {name : "Kumar", age : 25});
+// console.log("🚀 ~ res:", res)
+
+// type updatedProps =  Pick<Users , 'age' | 'email' | 'otp'>
+type updatedProps =  Pick<Users1 , 'age' | 'email' | 'otp'>
+type updatedPropsPartial = Partial<updatedProps>
+
+function updateUser (props : updatedPropsPartial) {
+        return props.otp
+}
+
+const res = updateUser({});
+console.log("🚀 ~ res:", res)
+
+
+type config =  {
+   endPoint : string;
+   apiKey : string;
+}
+
+const auth : Readonly <config>  = {
+  endPoint : "sdfghjk",
+  apiKey : "dtfyguhjk"
+}
+
+// auth.endPoint = "jkhvkafs";
+
