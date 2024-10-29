@@ -60,6 +60,13 @@ console.log(isLegal({
     age : 20
 }))
 
+console.log(isLegal({
+  firstName : "Vinay",
+  lastName :"Gupta",
+  email : "vinay@gmail",
+  age : 20
+}))
+
 
 type Employee = {
     name: string;
